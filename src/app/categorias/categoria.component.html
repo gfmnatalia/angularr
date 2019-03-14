@@ -1,0 +1,17 @@
+<table class = "table">
+    <thead>
+        <th>Ids</th>
+        <th>Nome</th>
+        <th>Ações</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let categoria of categorias">
+            <td>{{categoria.id}}</td>
+            <td>{{categoria.nome}}</td>
+            <td>
+                <button class="btn btn-info"></button>
+                <button class="btn btn-danger"></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
