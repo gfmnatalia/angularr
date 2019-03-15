@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core'
+import { Categoria } from './shared/categoria.model';
 
-const CATEGORIAS: Array<any> = [
+const CATEGORIAS: Array<Categoria> = [
     { id: 1, nome: 'Eletronicos' }, 
     { id: 2, nome: 'Higiene' }, 
     { id: 3, nome: 'Cama/Mesa/Banho' }, 
@@ -11,17 +12,17 @@ const CATEGORIAS: Array<any> = [
 
 
 @Component ({
-    selector: 'categoria',
+    selector: 'categorias',
     templateUrl: './categoria.component.html'
 })
 
 export class CategoriaComponent implements OnInit {
-    categorias: any[];
+    public categorias;
 
-    constructor(){
+    public constructor(){
     }
 
-    ngOnInit() {
+    public ngOnInit() {
         this.categorias = CATEGORIAS;
     }
 }
