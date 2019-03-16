@@ -6,8 +6,8 @@
     </thead>
     <tbody>
         <tr *ngFor="let categoria of categorias">
-            <td>{{categoria.id}}</td>
-            <td>{{categoria.nome}}</td>
+            <td>{{ categoria.id }}</td>
+            <td>{{ categoria.nome }}</td>
             <td>
                 <button class="btn btn-info" data-toggle="modal" data-target="#categoriaDetail" (click)=onClick(categoria)> 
                      <span class="fa fa-info-circle"></span> 
