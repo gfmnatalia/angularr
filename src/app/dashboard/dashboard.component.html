@@ -1,3 +1,16 @@
 <div class="container-fluid"> 
     <h1>Painel de Controle</h1>
 </div>  
+
+<div class='container'>
+    <table class='table-striped'>
+        <thead>
+            <th>Tarefa</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let categoria of categorias">
+                <td>{{ categoria.nome }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

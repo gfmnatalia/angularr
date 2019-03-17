@@ -8,6 +8,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { CategoriaDetailComponent } from './categorias/categoria-detail/categoria-detail.component';
+import { CategoriaService } from './categorias/shared/categoria.service';
+
+
 
 
 const routes = RouterModule.forRoot ([
@@ -30,7 +33,7 @@ const routes = RouterModule.forRoot ([
     FormsModule,
     routes
   ],
-  providers: [],
+  providers: [CategoriaService],
   bootstrap: [AppComponent]
 })
 

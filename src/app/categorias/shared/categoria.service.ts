@@ -27,4 +27,7 @@ export class CategoriaService {
         return promise;
     }
 
+    getMainCategorias(): Promise<any> {
+        return Promise.resolve(CATEGORIAS.slice(0, 3));
+    }
 }
