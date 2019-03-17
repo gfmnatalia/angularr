@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Categoria } from './categoria.model';
 
-const CATEGORIAS: Array<Categoria> = [
+const CATEGORIAS: Categoria[] = [
     { id: 1, nome: 'Eletronicos' },
     { id: 2, nome: 'Higiene' },
     { id: 3, nome: 'Cama/Mesa/Banho' },
@@ -13,7 +13,18 @@ const CATEGORIAS: Array<Categoria> = [
 @Injectable()
 export class CategoriaService {
 
-getCategorias(): Array<Categoria> {
-    return CATEGORIAS;
+    categorias: Categoria[];
+
+    getCategorias(): Promise<any> {
+        const promise = new Promise((resolve, reject) => {
+            if (CATEGORIAS.length > 0) {
+                resolve(CATEGORIAS);
+            }else {
+                const error_msg = 'Não há tarefas';
+                reject(error_msg);
+            }
+        });
+        return promise;
     }
+
 }
