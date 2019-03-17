@@ -1,30 +1,22 @@
 import { Component, OnInit} from '@angular/core';
 import { Categoria } from './shared/categoria.model';
-
-const CATEGORIAS: Array<Categoria> = [
-    { id: 1, nome: 'Eletronicos' },
-    { id: 2, nome: 'Higiene' },
-    { id: 3, nome: 'Cama/Mesa/Banho' },
-    { id: 4, nome: 'Eletrodomesticos' },
-    { id: 5, nome: 'Roupas' },
-    { id: 6, nome: 'Acessorios' }
-];
-
+import { CategoriaService } from './shared/categoria.service';
 
 @Component ({
     selector: 'app-categorias',
-    templateUrl: './categorias.component.html'
+    templateUrl: './categorias.component.html',
+    providers: [ CategoriaService ]
 })
 
 export class CategoriasComponent implements OnInit {
-    public categorias: Categoria[];
+    public categorias: Array<Categoria>;
     public categoriaSelecionada: Categoria;
+    
 
-    public constructor() {
-    }
+    public constructor(private categoriaService: CategoriaService) { }
 
     public ngOnInit() {
-        this.categorias = CATEGORIAS;
+        this.categorias = this.categoriaService.getCategorias();
     }
 
    public onClick(categoria: Categoria): void {
