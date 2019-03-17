@@ -12,10 +12,20 @@
     <hr>
     <br />
 
-    <input type="text" placeholder="Evento onKeyDown" (keydown)="onKeyDown($event)" [value]="userName">
+    <input type="text" placeholder="Evento onKeyDown db" (keydown)="onKeyDown($event)" [value]="userName">
     User Name: <strong>{{ userName }}</strong>
     <br />
-    <input type="text" placeholder="Evento onKeyUp" on-keyup="onKeyUp($event)" [value]="userEmail">
+
+    <input type="text" placeholder="2-way-db" [(ngModel)]="userName" >
+    User Name 2-way-db: <strong>{{ userName }}</strong>
+    <br />
+
+    <input type="text" placeholder="Evento onKeyUp db" on-keyup="onKeyUp($event)" [value]="userEmail">
     User Email: <strong> {{ userEmail }}</strong>
+    <br />
+
+    <input type="text" placeholder="2-way-db" [(ngModel)]="userEmail" >
+    User Email 2-way-db: <strong>{{ userEmail }}</strong>
+    
 </div>
   

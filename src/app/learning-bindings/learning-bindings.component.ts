@@ -14,7 +14,7 @@ export class LearningBindingsComponent  {
     constructor() {
         this.mouseClickCount = 0;
         this.mouseOverCount = 0;
-        this.userName = 'Nome Inical';
+        this.userName = 'Nome Inicial';
         this.userEmail = 'Email Inicial';
     }
 
