@@ -1,0 +1,21 @@
+<div class="container">
+    <h3>Testando OnClick</h3>    
+    <button on-click="onClick()">Evento on-click {{ mouseClickCount }}</button>
+    <button (click)="onClick()">Evento (click) {{ mouseClickCount }}</button>
+
+    <br />
+    <h3 >Testando OnMouseOver</h3> 
+    <button on-mouseover="onMouseOver()">Evento on-mouseover {{ mouseOverCount }}</button>
+    <button (mouseover)="onMouseOver()">Evento (mouseover) {{ mouseOverCount }}</button>
+
+    <br />
+    <hr>
+    <br />
+
+    <input type="text" placeholder="Evento onKeyDown" (keydown)="onKeyDown($event)" [value]="userName">
+    User Name: <strong>{{ userName }}</strong>
+    <br />
+    <input type="text" placeholder="Evento onKeyUp" on-keyup="onKeyUp($event)" [value]="userEmail">
+    User Email: <strong> {{ userEmail }}</strong>
+</div>
+  
