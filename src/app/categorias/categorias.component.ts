@@ -13,10 +13,10 @@ const CATEGORIAS: Array<Categoria> = [
 
 @Component ({
     selector: 'app-categorias',
-    templateUrl: './categoria.component.html'
+    templateUrl: './categorias.component.html'
 })
 
-export class CategoriaComponent implements OnInit {
+export class CategoriasComponent implements OnInit {
     public categorias: Categoria[];
     public categoriaSelecionada: Categoria;
 
