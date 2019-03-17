@@ -15,6 +15,7 @@ import { CategoriaService } from './categorias/shared/categoria.service';
 
 const routes = RouterModule.forRoot ([
   { path: 'categorias', component: CategoriasComponent },
+  { path: 'categorias/:id', component: CategoriaDetailComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'}
 ]);
