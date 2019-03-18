@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
 
 import 'rxjs/add/operator/switchMap';
 
@@ -14,11 +15,11 @@ import { CategoriaService } from '../shared/categoria.service';
 })
 export class CategoriaDetailComponent implements OnInit {
 
-    @Input()
     categoria: Categoria;
     constructor(
         private categoriaService: CategoriaService,
-        private route: ActivatedRoute
+        private route: ActivatedRoute,
+        private location: Location
         ) { }
 
     public ngOnInit() {
@@ -26,4 +27,8 @@ export class CategoriaDetailComponent implements OnInit {
         .switchMap((params: Params) => this.categoriaService.getCategoria(+params['id']))
         .subscribe(categoria => this.categoria = categoria);
      }
+
+    public goBack() {
+        this.location.back();
+    }
 }

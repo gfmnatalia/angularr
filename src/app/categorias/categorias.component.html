@@ -9,9 +9,9 @@
             <td>{{ categoria.id }}</td>
             <td>{{ categoria.nome }}</td>
             <td>
-                <button class="btn btn-info" data-toggle="modal" data-target="#categoriaDetail" (click)=onClick(categoria)> 
+                <a class="btn btn-info" [routerLink]="['/categorias', categoria.id]"> 
                      <span class="fa fa-info-circle"></span> 
-                </button>
+                </a>
 
                 <button class="btn btn-danger" > 
                     <span class="fa fa-trash"></span>
@@ -20,5 +20,3 @@
         </tr>
     </tbody>
 </table>
-
-<app-categoria-detail [categoria]=categoriaSelecionada> </app-categoria-detail>
