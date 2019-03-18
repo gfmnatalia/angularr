@@ -1,15 +1,13 @@
-
-<div class="container">
-<h1>Detalhes da Categoria: {{ categoria?.nome }}</h1>
+<h1 class="page-header">Detalhes da Categoria</h1>
+<hr/>
 
 
   <div *ngIf="categoria">
       <div class="form-group">
-        <label for="nome">Categoria:</label>        
+        <label for="nome">Nome:</label>        
           <input [(ngModel)]="categoria.nome" type="text" class="form-control form-control-sm" id="nome" aria-describedby="emailHelp" placeholder="Nome">
       </div>
       <button type="submit" class="btn btn-success">Salvar</button>
       <button type="submit" class="btn btn-info" (click)="goBack()">Voltar</button>
       
-    </div>
-</div>
+  </div>
