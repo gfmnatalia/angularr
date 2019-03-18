@@ -30,4 +30,9 @@ export class CategoriaService {
     getMainCategorias(): Promise<any> {
         return Promise.resolve(CATEGORIAS.slice(0, 3));
     }
+
+    getCategoria(id: number): Promise<any> {
+        return this.getCategorias()
+            .then(categorias => categorias.find(categoria => categoria.id === id));
+    }
 }
