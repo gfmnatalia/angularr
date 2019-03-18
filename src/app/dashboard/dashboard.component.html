@@ -2,15 +2,20 @@
     <h1>Painel de Controle</h1>
 </div>  
 
-<div class='container'>
-    <table class='table-striped'>
+
+    <table class='table table-striped'>
         <thead>
             <th>Tarefa</th>
+            <th>Ações</th>
         </thead>
         <tbody>
             <tr *ngFor="let categoria of categorias">
                 <td>{{ categoria.nome }}</td>
+                <td>
+                    <a class="btn btn-info" [routerLink]="['/categorias', categoria.id]">
+                        <span class="fa fa-info-circle"></span> 
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>
-</div>
