@@ -8,9 +8,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { CategoriaDetailComponent } from './categorias/categoria-detail/categoria-detail.component';
+
 import { CategoriaService } from './categorias/shared/categoria.service';
 
-import {AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryCategoriaDataService } from './in-memory-categoria-data.service';
 
 
 
@@ -26,7 +30,8 @@ import {AppRoutingModule} from './app-routing.module';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryCategoriaDataService, {apiBase: 'memApi'})
   ],
   providers: [CategoriaService],
   bootstrap: [AppComponent]
