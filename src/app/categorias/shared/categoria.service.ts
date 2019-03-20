@@ -1,5 +1,9 @@
+import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
+
 import { Categoria } from './categoria.model';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+
 
 const CATEGORIAS: Categoria[] = [
     { id: 1, nome: 'Eletronicos' },
@@ -12,8 +16,7 @@ const CATEGORIAS: Categoria[] = [
 
 @Injectable()
 export class CategoriaService {
-
-    categorias: Categoria[];
+    public constructor(private http: Http){}
 
     getCategorias(): Promise<any> {
         const promise = new Promise((resolve, reject) => {
