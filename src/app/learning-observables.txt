@@ -1,0 +1,26 @@
+
+TEORIA
+Observable
+    - Array de Observer
+    - Métodos: receberInscrição[Observer]
+                removerInscrição[Observer]
+                notificarObservers()
+
+Observer
+    - receberNotificacao
+
+----------------------------------------------
+
+PRÁTICA - RXJS
+
+    Observable
+        -subscribe(observer)
+        -notify
+            -observer.next(novoDado)
+            -observer.error(erro)
+            -observer.complete()
+
+    Observer
+        next(novoDado)
+        error(erro)
+        complete()

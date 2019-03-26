@@ -5,7 +5,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 @Injectable()
 export class InMemoryCategoriaDataService implements InMemoryDbService {
 
-    createDb(){
+    createDb() {
         const categorias = [
             { id: 1, nome: 'Eletronicos' },
             { id: 2, nome: 'Higiene' },
@@ -14,6 +14,6 @@ export class InMemoryCategoriaDataService implements InMemoryDbService {
             { id: 5, nome: 'Roupas' },
             { id: 6, nome: 'Acessorios' }
         ];
-        return { categorias }
+        return { categorias };
     }
 }
